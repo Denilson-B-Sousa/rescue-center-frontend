@@ -1,21 +1,2 @@
-@import url("./reset.css");
-
-:root {
-    --transparent-min: #ffffff33;
-    --transparent-middle: #ffffff80;
-    --transparent-max: #ffffffcc;
-    --pink: #ff3d9a;
-    --purple-light: #937aff;
-    --purple: #5758f1;
-    --blue-light: #3f96fc;
-    --green: #04c27f;
-    --green-light: #41cc4f;
-    --yellow-dark: #f1d06e;
-    --yellow: #f8db46;
-    --yellow-light: #fef7c1;
-    --yellow-min: #fff9e1;
-    --white: #ffffff;
-    --gray-light: #f5f5f5;
-    --gray-dark: #37383f;
-    --black: #1e1f27;
-}
+@import url(./global.css);
+@import url(./header.css);
