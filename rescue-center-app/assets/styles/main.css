@@ -1,2 +1,87 @@
 @import url(./global.css);
 @import url(./header.css);
+
+/* HERO SECTION */
+
+main {
+    display: flex;
+    flex-flow: column wrap;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.hero-section {
+    width: 78rem;
+    margin: 0 auto;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: calc(2rem + 8px);
+    justify-content: center;
+    align-items: start;
+    margin-top: calc(4rem + 8px);
+}
+
+.hero-text-box {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 37rem;
+    height: 34.7rem;
+    margin-top: 1rem;
+}
+
+.heading-primary {
+    color: var(--black);
+    font-family: "Poppins";
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+.heading-secondary {
+    color: var(--black);
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 3rem 0 1.5rem 0;
+}
+
+.hero-description {
+    font-family: "Inter";
+    font-weight: medium;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    width: 36.25rem; /* 580px / 16  */
+    margin-top: 1.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.btn-container {
+    display: flex;
+    gap: 2rem;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins';
+    font-size: calc(1rem + 4px);
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.btn-image-container {
+    display: inline-flex;
+    align-items: center;
+}
+
