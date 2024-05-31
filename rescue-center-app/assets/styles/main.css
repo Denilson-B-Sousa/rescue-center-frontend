@@ -248,3 +248,61 @@ main {
     margin-top: 1rem;
 }
 
+/* ADOPTION INFORMATION SECTION */
+
+.adoption-information-section {
+    background-color: var(--gray-light);
+    padding: 5rem;
+}
+
+.adoption-information-title {
+    font-family: 'Poppins';
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--black);
+}
+
+.adoption-information-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2.5rem;
+    margin: 0 auto;
+    width: 75.5rem;
+    padding-top: 1.5rem;
+}
+
+.adoption-information-list-box {
+    margin-top: calc(2rem + 10px);
+}
+
+.adoption-information-list-box > ul {
+    padding-top: 1.25rem;
+}
+
+.adoption-information-list-box > ul > li {
+    font-family: 'Inter';
+    font-size: 1.5rem;
+    color: var(--gray-dark);
+    line-height: 2;
+    list-style-type: disc;
+}
+
+.adoption-information-list-title {
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.btn-adoption {
+    background-color: var(--black);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--gray-light);
+    margin: 2rem 0;
+    cursor: pointer;
+}
