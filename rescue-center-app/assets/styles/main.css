@@ -89,8 +89,6 @@ main {
 
 .accomplishment-section {
     background-color: var(--black);
-    margin: calc(7rem + 8px) 0;
-    height: 100%;
 }
 
 .accomplishment-result-box {
@@ -187,3 +185,66 @@ main {
 .prev:hover, .next:hover {
     background-color: var(--black);
 }
+
+/* DONATION IMPACT */
+
+.donation-impact-section{
+    background-color: var(--black);
+    width: 100%;
+}
+
+.donation-impact-title {
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.donation-impact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2.5rem;
+    row-gap: 3.75rem;
+    margin: 4rem auto 4rem;
+    width: 76.5rem;
+}
+
+.donation-impact-box-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 2.25rem;
+}
+
+.donation-impact-box-title > span {
+    position: absolute;
+    left: 70%;
+    bottom: -80%;
+}
+
+.donation-impact-box-title > h3 {
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.donation-impact-text-box {
+    border: 2px solid var(--white);
+    width: 23.5rem;
+    border-radius: 1.5rem;
+    padding: 2.25rem;
+}
+
+.donation-impact-text-box > p {
+    font-family: 'Inter';
+    font-weight: medium;
+    font-size: 1.25rem;
+    color: var(--transparent-max);
+    line-height: 1.6;
+    padding: 0.5rem 0 0 0;
+    margin-top: 1rem;
+}
+
