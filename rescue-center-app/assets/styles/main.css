@@ -19,10 +19,10 @@ main {
 .hero {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: calc(2rem + 8px);
+    column-gap: 2.5rem;
     justify-content: center;
     align-items: start;
-    margin-top: calc(4rem + 8px);
+    margin: 4.5rem 0;
 }
 
 .hero-text-box {
@@ -399,3 +399,62 @@ main {
     color: var(--white);
 }
 
+/* ADOPTABLES SECTION */
+
+.adoptables-section {
+    background-color: var(--black);
+}
+
+.adoptables-section-container {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.adoptables-section-btn {
+    text-align: center;
+}
+
+.adoptables-section-secondary-title {
+    font-family: 'Poppins';
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: var(--white);
+}
+
+.adoptables-section-tertiary-title {
+    font-family: 'Poppins';
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    padding-top: 4rem;
+}
+
+.adoptables-section-secondary-title > span {
+    color: var(--yellow);
+}
+
+.btn-adoptables-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+}
+
+.btn-adoptables {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    font-family: 'Poppins';
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: 2px solid var(--white);
+    color: var(--white);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.outcome {
+    background-color: var(--yellow);
+    color: var(--black) !important;
+    border: none !important;
+}
