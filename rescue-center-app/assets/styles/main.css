@@ -458,3 +458,74 @@ main {
     color: var(--black) !important;
     border: none !important;
 }
+
+/* NEWSLETTER SECTION */
+
+.newsletter-section {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.newsletter-container {
+    margin: 0 auto;
+    text-align: center;
+    padding: 5rem 0;
+    width: 74rem;
+}
+
+.newsletter-title {
+    font-family: 'Poppins';
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.newsletter-description {
+    font-family: 'Inter';
+    font-size: 1.25rem;
+    line-height: 1.5;
+    padding-top: 1.5rem;
+    padding-bottom: 5rem;
+}
+
+.newsletter-container-input {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.newsletter-input {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.newsletter-input {
+    border: 2px solid var(--white);
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    width: 24.7rem;
+    padding: 1.2rem 1.5rem;
+}
+
+input::placeholder {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--transparent-middle);
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+.newsletter-btn {
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+}
