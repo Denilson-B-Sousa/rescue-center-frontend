@@ -1,0 +1,91 @@
+@import url(./global.css);
+
+.carousel-container {
+    padding: 5rem 0;
+}
+
+.carousel {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    padding: 5rem 0;
+    margin: 0 auto;
+    max-width: 1208px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.slide {
+    width: 250px;
+}
+
+.wrapper {
+    position: relative;
+    max-width: 1090px;
+    margin: 0 auto;
+}
+
+.navigation {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1208px;
+}
+
+.navigation i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
+    background-color: var(--white);
+    font-size: 1.25rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.navigation i:first-child {
+    left: -64px;
+}
+
+.navigation i:last-child {
+    right: -72px;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/* ESTILO RADIOS */
+
+.slide-controls {
+    display: flex;
+    justify-content: center;
+}
+
+.slide-controls .radio {
+    display: none;
+}
+
+.slide-controls .slide-control {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--transparent-min);
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+/* Estilo para o radio button selecionado */
+
+.slide-controls .radio:checked + .slide-control {
+    background-color: var(--white);
+}

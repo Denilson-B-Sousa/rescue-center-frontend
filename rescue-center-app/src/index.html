@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:wght@400;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rescue Center</title>
     <link rel="stylesheet" href="../assets/styles/main.css">
@@ -108,26 +109,57 @@
             </div>
 
             <div class="carrosel-container">
-                <div class="slides">
-                    <div class="slider">
-                        <img src="../assets/images/slide-images/slide-image-1.svg" alt="" class="slide">
-                        <img src="../assets/images/slide-images/slide-image-2.svg" alt="" class="slide">
-                        <img src="../assets/images/slide-images/slide-image-3.svg" alt="" class="slide">
-                        <img src="../assets/images/slide-images/slide-image-4.png" alt="" class="slide">
-                    </div>
-                </div>
-                <button class="prev-slide" onclick="handleChangeSlide(-1)">
-                    <span>
-                        <img src="../assets/images/slide-images/arrow-left.svg" alt="">
-                    </span>
-                </button>
+              <div class="navigation">
+                    <i id="left" class="fa-solid fa-arrow-left"></i>
+                    <div class="wrapper">
+                        <div class="carousel">
+                            <div class="slide">
+                                <div class="img">
+                                    <img src="../assets/images/pets/Bob.png" alt="">
+                                </div>
+                            </div>
 
-                <button class="next-slide" onclick="handleChangeSlide(1)">
-                    <span>
-                        <img src="../assets/images/slide-images/arrow-right.svg" alt="">
-                    </span>
-                </button>
-            </div>
+                            <div class="slide">
+                                <div class="img">
+                                    <img src="../assets/images/pets/Clorinde.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <div class="img">
+                                    <img src="../assets/images/pets/Roney.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <div class="img">
+                                    <img src="../assets/images/pets/Flocks.png" alt="">
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <div class="img">
+                                    <img src="../assets/images/pets/Aristotle.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <i id="right" class="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div class="slide-controls">
+                        <input type="radio" class="radio" id="slide1" name="carousel" checked>
+                        <label for="slide1" class="slide-control"></label>
+                        <input type="radio" class="radio" id="slide2" name="carousel">
+                        <label for="slide2" class="slide-control"></label>
+                        <input type="radio" class="radio" id="slide3" name="carousel">
+                        <label for="slide3" class="slide-control"></label>
+                        <input type="radio" class="radio" id="slide4" name="carousel">
+                        <label for="slide4" class="slide-control"></label>
+                        <input type="radio" class="radio" id="slide5" name="carousel"> 
+                        <label for="slide5" class="slide-control"></label>
+                      </div>
+                    </div>
+              </div>
+
 
         </section>
 
@@ -333,6 +365,8 @@
         </section>
     </main>
 
+    <!-- FOOTER -->
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-logo">
@@ -418,6 +452,8 @@
         <div class="footer-line"></div>
         <h2 class="footer-phrase">​We are not just a rescue, <span>we are a refuge</span></h2>
     </footer>
+
+    <script src="../assets/js/carousel.js"></script>
 </body>
 
 </html>
