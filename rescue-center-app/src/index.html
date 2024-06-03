@@ -66,7 +66,7 @@
                                 </span>
                                 Donate
                             </button>
-                            <button class="btn">
+                            <button class="btn" id="btn-adopt">
                                 <span class="btn-image-container">
                                     <img src="../assets/images/hero/dog-icon.svg" alt="">
                                 </span>
@@ -80,6 +80,72 @@
                 </div>
             </div>
         </section>
+
+        <!-- MODAL ADOPT -->
+        <dialog class="adopt-modal modal"  id="adopt-modal">
+                    
+            <h2 class="modal-title">Apply to Adopt</h2>
+            <p class="adopt-modal-description">Your help can make a world of difference!</p>
+
+            <form action="" class="form" id="form-adopt">
+
+                <label for="email" id="email-label">
+                    Email<span>*</span>
+                </label>
+                <input type="email" name="email" id="email-input" class="email-input-modal" placeholder="youremail@here" required>
+
+                <span class="error" id="error-email"></span>
+
+                <label for="fullName">
+                    Full Name<span>*</span>
+                </label>
+                
+                <input type="text" name="fullName" id="fullName-input" class="fullName-input" required>
+
+                <span class="error" id="error-fullName"></span>
+
+                <label for="dateOfBirth">
+                    Date of Birth<span>*</span>
+                </label>
+
+               <div class="select-container">
+                   <select class="day" id="day" name="Day" required>
+                        <option value="false">Day</option>
+                   </select>
+                   <select class="month" id="month" required>
+                        <option value="false">Month</option>
+                   </select>
+                    <select class="year" id="year" required >
+                        <option value="false">Year</option>
+                    </select>
+                    <span id="select-error"></span>
+               </div>
+
+
+                <div class="checkbox-container">
+                    <span id="checkbox-error"></span>
+                    <input type="checkbox" id="checkbox" class="check-btn">
+                    <label for="checkbox" class="check-btn-warning checkbox-label" >
+                        I agree with <a href="https://policies.google.com/privacy?hl=pt-BR" class="warning-links" target="_blank" >Privacy Policy</a>
+                         and <a href="https://policies.google.com/terms?hl=pt-BR" class="warning-links" target="_blank">Terms of Conditions</a></label>
+                </div>
+            </form>
+            <div class="modal-adopt-btn-container">
+                <button class="modal-adopt-btn modal-adopt-btn-confirm" id="btn-send">
+                    <span>
+                        <img src="../assets/images/adopt-modal/Icon.svg" alt="">
+                    </span>
+                    I wanna Adopt!
+                </button>
+                <button id="btn-adoptModal-close" class="modal-adopt-btn modal-adopt-btn-close">
+                    <span>
+                        <img src="../assets/images/adopt-modal/CaretLeft.svg" alt="">
+                    </span>
+                    Cancel
+                </button>
+            </div>
+        </dialog>
+       
 
         <!-- ACCOMPLISHMENT SECTION -->
 
@@ -454,6 +520,7 @@
     </footer>
 
     <script src="../assets/js/carousel.js"></script>
+    <script src="../assets/js/modal.js"></script>
 </body>
 
 </html>
