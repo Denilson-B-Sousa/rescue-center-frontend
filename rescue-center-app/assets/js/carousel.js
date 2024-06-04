@@ -20,7 +20,7 @@ const next = () => {
     setTimeout(() => {
         infiniteScroll();
         updateRadioButtons();
-    }, 300); // Ajuste o tempo conforme necessário para a transição
+    }, 100); // Ajuste o tempo conforme necessário para a transição
 };
 
 const previous = () => {

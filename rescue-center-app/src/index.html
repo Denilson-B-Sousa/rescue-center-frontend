@@ -36,7 +36,7 @@
                 <img src="../assets/images/header/phone.svg" alt="">
                 631-249-7325
             </span>
-            <button class="call-to-action">
+            <button class="call-to-action" id="btn-donate">
                 <span class="image-container">
                     <img src="../assets/images/header/heart.svg" alt="">
                 </span>
@@ -60,9 +60,9 @@
                     <div class="hero-buttons">
                         <h2 class="heading-secondary">Your Gift Helps Save Lives</h2>
                         <div class="btn-container">
-                            <button class="call-to-action">
+                            <button class="call-to-action" id="btn-donate">
                                 <span class="image-container">
-                                    <img src="../assets/images/header/heart.svg" alt="" class="hero-image">
+                                    <img src="../assets/images/header/heart.svg" alt="" class="hero-image" id="btn-donate">
                                 </span>
                                 Donate
                             </button>
@@ -144,6 +144,57 @@
                     Cancel
                 </button>
             </div>
+        </dialog>
+
+         <!-- DONATE MODAL -->
+
+         <dialog class="donate-modal modal" id="donate-modal">
+            <h2 class="modal-title modal-donate-title">Choose your Donate</h2>
+
+            <form action="" class="form">
+                <label for="">Email <span>*</span></label>
+                <input type="email" class="email-input-modal" id="email-donate" placeholder="youremail@here">
+
+                <span class="error" id="email-donate-error"></span>
+
+                <label for="">How much can you help?</label>
+                <input type="number" id="money-donate" class="money-input-modal" name="money" pattern="\d+(\,\d{2})?" placeholder="R$95,00" class="donate-input-modal money-input" required >
+
+                <span class="error" id="money-donate-error"></span>
+
+                <label for="">Payment Method <span>*</span></label>
+
+                <div class="payment-method-container">
+                    <div class="payment-method-radio-container">
+
+                        <input type="radio" class="radio-modal" name="paymentOption" id="pix" value="PIX" required>
+                        <label for="pix" class="payment-method" id="label-pix">Pix</label>
+
+                        <input type="radio" class="radio-modal-two" name="paymentOption" id="credit" value="Credit Card" required>
+                        <label for="credit" class="payment-method-two" id="label-credit">Credit Card</label>
+
+                        <input type="radio" class="radio-modal-three" name="paymentOption" id="paypal" value="Paypal" required>
+                        <label for="paypal" class="payment-method-three" id="label-paypal">Paypal</label>
+                    </div> 
+                </div>
+
+                <span class="error" id="option-payment-error"></span>
+
+                <div class="btn-modal-container">
+                    <button class="btn-donateModal" id="btn-send-donate">
+                        <span class="image-container">
+                            <img src="../assets/images/header/heart.svg" alt="">
+                        </span>
+                        I wanna  Help!
+                    </button>
+                    <button id="btn-donateModal-close" class="modal-btn btn-donateModal-close">
+                        <span>
+                            <img src="../assets/images/adopt-modal/CaretLeft.svg" alt="">
+                        </span>
+                        Cancel
+                    </button>
+                </div>
+            </form>
         </dialog>
        
 
@@ -314,6 +365,7 @@
             </div>
         </section>
 
+
         <!-- ADOPTION INFORMATION SECTION  -->
 
         <section class="adoption-information-section">
@@ -332,7 +384,7 @@
                         <li>Be over 23 years of age to adopt a dog and 21 years of age to adopt a cat</li>
                         <li>Be ready to adopt within 7-10 days</li>
                     </ul>
-                    <button class="btn-adoption">Apply to Adopt</button>
+                    <button class="btn-adoption" id="btn-adopt">Apply to Adopt</button>
                 </div>
             </div>
         </section>
@@ -401,7 +453,7 @@
                         <h3 class="adoptables-section-tertiary-title">Browse our adorable adoptables</h3>
                         <div class="btn-adoptables-container">
                             <button class="btn-adoptables outcome">View Adoptables</button>
-                            <button class="btn-adoptables" id="btn-adoptables">Apply to Adopt</button>
+                            <button class="btn-adoptables" id="btn-adopt">Apply to Adopt</button>
                         </div>
                     </div>
                 </div>
@@ -520,7 +572,8 @@
     </footer>
 
     <script src="../assets/js/carousel.js"></script>
-    <script src="../assets/js/modal.js"></script>
+    <script src="../assets/js/adoptModal.js"></script>
+    <script src="../assets/js/donateModal.js"></script>
 </body>
 
 </html>

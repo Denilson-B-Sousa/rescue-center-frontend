@@ -1,227 +1,364 @@
 @import url(./global.css);
 
 .modal {
-    border: none;
-    border-radius: 2rem;
-    width: 28rem;
-    height: 41.5rem;
-    max-width: 100%;
+  border: none;
+  border-radius: 2rem;
+  width: 28rem;
+  height: 41.5rem;
+  max-width: 100%;
 }
 
 dialog::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 dialog[open] {
-    -webkit-animation: show 0.3s ease normal forwards;
-    animation: show 0.300s ease normal forwards;
-    position: fixed;
-    top: 90%;
-    left: 30%;
-    transform: translate(-50%, -50%);
+  -webkit-animation: show 0.3s ease normal forwards;
+  animation: show 0.3s ease normal forwards;
+  position: fixed;
+  top: 90%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 
-
 @-webkit-keyframes show {
-    from {
-        transform: translate(50%, -50%);
-    }
-    to {
-        transform: translate(-50%, -50%);
-    }
+  from {
+    transform: translate(50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
 }
 
 @keyframes show {
-    from {
-        transform: translate(50%, -50%);
-    }
-    to {
-        transform: translate(-50%, -50%);
-    }
+  from {
+    transform: translate(50%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
 }
 
 dialog::backdrop {
-    background-color: #0000005d;
+  background-color: #0000005d;
 }
 
-.donate-modal, .adopt-modal {
-    padding: 2rem;
+.donate-modal,
+.adopt-modal {
+  padding: 2rem;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .modal-title {
-    font-family: 'Poppins';
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--black);
-    text-align: center;
+  font-family: "Poppins";
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--black);
+  text-align: center;
 }
 
 .adopt-modal-description {
-    font-family: 'Poppins';
-    font-size: calc(1rem + 2px);
-    font-weight: medium;
-    text-align: center;
-    padding: 1rem;
-    color: var(--black);
+  font-family: "Poppins";
+  font-size: calc(1rem + 2px);
+  font-weight: medium;
+  text-align: center;
+  padding: 1rem;
+  color: var(--black);
 }
 
 /* FORMULÁRIO ADOPT MODAL */
 
 .form {
-    display: flex;
-    gap: 0.5rem;
-    flex-flow: column wrap;
-    padding-top: 1rem;
-    font-size: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-flow: column wrap;
+  padding-top: 1rem;
+  font-size: 1.5rem;
 }
 
 .form > label {
-    font-family: 'Poppins';
-    font-size: 0.75rem;
-    font-weight: bold;
-    color: var(--pink);
-    padding-top: 0.75rem;
-    text-transform: uppercase;
+  font-family: "Poppins";
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--pink);
+  padding-top: 0.75rem;
+  text-transform: uppercase;
 }
-
 
 .form > label > span {
-    color: var(--blue-light);
+  color: var(--blue-light);
 }
 
-.fullName-input, .email-input-modal {
-    border: 1px solid var(--purple-light);
-    border-radius: 0.5rem;
-    padding: 1rem;
-    max-width: 100%;
+.fullName-input,
+.email-input-modal,
+.money-input-modal {
+  border: 1px solid var(--purple-light);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  max-width: 100%;
 }
 
-input::placeholder {
-    font-size: 1.25rem;
-    color: var(--black);
+.email-input-modal::placeholder {
+  font-size: 1rem;
+  color: var(--gray-dark);
+}
+
+.email-input-modal:focus::placeholder {
+    visibility: hidden;
 }
 
 .select-container {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.day, .month, .year {
-    border: 1px solid var(--purple-light);
-    padding: 1rem;
-    border-radius: 0.5rem;
-    color: var(--black);
+.day,
+.month,
+.year {
+  border: 1px solid var(--purple-light);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  color: var(--black);
 }
 
 input[type="checkbox"] {
-    display: none; 
-    
+  display: none;
 }
 
 .checkbox-label {
-    display: inline-block;
-    position: relative;
-    padding-left: 35px;
-    cursor: pointer;
-    user-select: none;
-    font-family: 'Poppins';
-    font-size: 0.75rem;
-    font-weight: medium;
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Poppins";
+  font-size: 0.75rem;
+  font-weight: medium;
 }
 
 .checkbox-label::before {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    left: 0;
-    top: -8px;
-    width: 25px;
-    height: 25px;
-    background-color: var(--gray-dark);
-    border-radius: 50%; /* Deixe arredondado se preferir */
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -8px;
+  width: 25px;
+  height: 25px;
+  background-color: var(--gray-dark);
+  border-radius: 50%; /* Deixe arredondado se preferir */
 }
 
 input[type="checkbox"]:checked + .checkbox-label::before {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 
 .checkbox-label::after {
-    content: "";
-    position: absolute;
-    left: 9px;
-    top: -5px;
-    width: 6px;
-    height: 12px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    display: none;
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: -5px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: none;
 }
 input[type="checkbox"]:checked + .checkbox-label::after {
-    display: block;
+  display: block;
 }
 
 .checkbox-btn-warning {
-    font-family: 'Poppins';
-    font-weight: bold;
-    font-size: 0.75rem;
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 0.75rem;
 }
 
 .warning-links {
-    color: var(--pink);
-    text-decoration: none;
+  color: var(--pink);
+  text-decoration: none;
 }
 
 .check-btn-warning > span {
-    color: var(--green);
+  color: var(--green);
 }
 
 .modal-adopt-btn-container {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 0.75rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem;
 }
 
 .modal-adopt-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    border: none;
-    color: var(--white);
-    font-family: 'Poppins';
-    font-size: calc(1rem + 2px);
-    font-weight: bold;
-    cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  border: none;
+  color: var(--white);
+  font-family: "Poppins";
+  font-size: calc(1rem + 2px);
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .modal-adopt-btn-confirm {
-    background-color: var(--green);
+  background-color: var(--green);
 }
 
 .modal-adopt-btn-close {
-    background-color: var(--gray-dark);
+  background-color: var(--gray-dark);
 }
 
 /* VALIDATION STYLES */
 
 .validation-error {
-    border: 2px solid red;
+  border: 2px solid red !important;
 }
 
 .error {
-    font-family: 'Inter';
+  font-family: "Inter" !important;
+  font-size: 1rem !important;
+  color: red !important;
+}
+
+/* DONATE MODAL */
+
+.modal-donate-title {
+  text-align: center;
+  line-height: 1.2;
+}
+
+.btn-modal-container {
+  display: flex;
+  margin: 0 auto;
+  flex-flow: column wrap;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  width: 15.6rem;
+}
+
+input[type="number"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  position: relative;
+}
+
+input[type="number"]::placeholder {
+    color: var(--gray-dark);
+    position: absolute;
+    left: 80%;
+    top: 25%;
     font-size: 1rem;
-    color: red;
+}
+
+
+input[type="number"]:focus::placeholder{
+    visibility: hidden;
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btn-donateModal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  border: none;
+  background-color: var(--pink);
+  color: var(--white);
+  font-family: "Poppins";
+  font-weight: bold;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.btn-donateModal-close {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 10.5rem;
+  background-color: var(--gray-dark);
+  color: var(--white);
+  font-family: "Poppins";
+  font-size: 1.25rem;
+  font-weight: bold;
+  border-radius: 2rem;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+}
+
+.payment-method-radio-container {
+  display: flex;
+  max-width: 60%;
+  gap: 0.5rem;
+}
+
+.radio-modal,
+.radio-modal-two,
+.radio-modal-three {
+  display: none;
+}
+
+.payment-method,
+.payment-method-two,
+.payment-method-three {
+  font-family: "Poppins";
+  font-size: 1rem;
+  color: var(--gray-dark);
+  border: 2px solid var(--purple-light);
+  padding: 1rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0.75rem;
+  align-items: center;
+  max-width: 50%;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.payment-method:after,
+.payment-method-two:after,
+.payment-method-three:after {
+  content: "";
+  height: 24px;
+  width: 24px;
+  background-color: var(--gray-dark);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-modal:checked + label,
+.radio-modal-two:checked + label,
+.radio-modal-three:checked + label {
+  background-color: var(--blue-light);
+  color: var(--white);
+}
+
+.radio-modal:checked + label:after,
+.radio-modal-two:checked + label:after,
+.radio-modal-three:checked + label:after {
+  height: 24px;
+  width: 24px;
+  background-color: var(--pink);
+  content: "✔";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }

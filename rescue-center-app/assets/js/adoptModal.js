@@ -1,3 +1,5 @@
+"use strict"
+
 const btnAdopt = document.querySelectorAll("#btn-adopt");
 const btnCloseAdoptModal = document.getElementById("btn-adoptModal-close");
 
@@ -37,8 +39,9 @@ function populateSelect(id, options, placeholder) {
     const select = document.getElementById(id);
     const placeholderOption = document.createElement("option");
 
-    placeholder.value = "";
-    placeholder.innerText = placeholder;
+    placeholder = "";
+    placeholder = placeholder;
+    
 
     select.appendChild(placeholderOption);
 
@@ -50,13 +53,18 @@ function populateSelect(id, options, placeholder) {
     }) 
 }
 
-populateSelect("day", Array.from({length: 31}, (_, i) => i + 1), 1);
-populateSelect("month", month, 1);
-populateSelect("year", Array.from({length: actualYear - 1900 + 1}, (_, i) => actualYear - i), actualYear, true);
+populateSelect("day", Array.from({length: 31}, (_, i) => i + 1), "Day");
+populateSelect("month", month, "Month");
+populateSelect("year", Array.from({length: actualYear - 1900 + 1}, (_, i) => actualYear - i), "Year");
 
-//Array.from para passar valores sequenciais 
+//Array.from constructor de array para passar valores sequenciais 
 //Dias 1 2 3 ...
 //Anos 1900, 1901, 1902... ano_atual
+
+// VALIDAÇÃO DO MODAL
+
+let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+let nameRegex = /^[a-zA-ZÀ-ÿ\s]{20,100}$/;
 
 function adoptModalValidation() {
 
@@ -73,7 +81,8 @@ function adoptModalValidation() {
     const month = document.getElementById("month").value;
     const year = document.getElementById("year").value;
 
-    const checkSelect = day === "false" || month === "false" || year === "false";
+
+    const checkSelect = day !== 'false' && month !== 'false' && year !== 'false';
     const errorSelect = document.getElementById("select-error");
 
     const checkboxInput = document.getElementById("checkbox");
@@ -82,10 +91,8 @@ function adoptModalValidation() {
 
     //Verificando email
 
-    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    let nameRegex = /^[a-zA-ZÀ-ÿ\s]{3,100}$/;
 
-    if(emailRegex.test(email) && nameRegex.test(fullName) && checkboxInput.checked === true && !checkSelect) {
+    if(emailRegex.test(email) && nameRegex.test(fullName) && checkboxInput.checked === true && checkSelect) {
         
         errorFullName.innerHTML = '';
         errorEmail.innerHTML = '';
@@ -97,33 +104,44 @@ function adoptModalValidation() {
 
         setTimeout(function() {
             window.location.replace("../../src/SucessPage/index.html");
-        }, 1000)
+        }, 2000)
 
-    } else if(email === '' || fullName === '' || checkboxInput.checked === false ) {
-        errorEmail.innerHTML = "*required field!";
+    } else if(email === '' || fullName === '' || checkboxInput.checked === false || checkSelect === false ) {
+        errorEmail.innerHTML = "*required!";
         emailInput.classList.add('validation-error');
 
-        errorFullName.innerHTML = "*required field!";
+        errorFullName.innerHTML = "*required!";
         fullNameInput.classList.add('validation-error');
 
         errorCheckbox.classList.add('error');
-        errorCheckbox.innerHTML = "*required";
+        errorCheckbox.innerHTML = "*required!";
+
+        errorSelect.classList.add("error");
+        errorSelect.innerHTML = "*required";
 
     } else if (emailRegex.test(email) === false) {
 
-        errorEmail.innerHTML = "*Invalid e-mail";
+        errorFullName.innerHTML = '';
+        fullNameInput.classList.remove('validation-error');
+
+        errorSelect.innerHTML = '';
+        errorCheckbox.innerHTML = '';
+
+        errorEmail.innerHTML = "*Invalid e-mail!";
         emailInput.classList.add('validation-error');
 
     } else if(nameRegex.test(fullName) === false) {
 
+        errorEmail.innerHTML = '';
+        emailInput.classList.remove('validation-error');
+
+        errorSelect.innerHTML = '';
+        errorCheckbox.innerHTML = '';
+
         fullNameInput.classList.add('validation-error');
-        errorFullName.innerHTML = "*Invalid name";
+        errorFullName.innerHTML = "*Please enter with full name!";
 
-    } else if(checkSelect === true) {
-
-        errorSelect.classList.add("error");
-        errorSelect.innerHTML = "*required";
-    }
+    } 
 }
 
 const btnSendAdoptModal = document.getElementById("btn-send");
@@ -131,3 +149,5 @@ const btnSendAdoptModal = document.getElementById("btn-send");
 btnSendAdoptModal.addEventListener("click", () => {
     adoptModalValidation();
 })
+
+
