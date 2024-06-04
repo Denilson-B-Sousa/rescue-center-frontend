@@ -385,6 +385,13 @@ main {
 .btn-bg-green {
     background-color: var(--green);
     color: var(--black);
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.btn-bg-green:hover {
+    color: var(--gray-dark);
 }
 
 .btn-bg-yellow {
@@ -454,6 +461,9 @@ main {
     color: var(--white);
     background-color: transparent;
     cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .outcome {

@@ -212,12 +212,18 @@ input[type="checkbox"]:checked + .checkbox-label::after {
   cursor: pointer;
 }
 
+.modal-adopt-btn > span {
+  display: inline-flex;
+  align-items: center;
+}
+
 .modal-adopt-btn-confirm {
   background-color: var(--green);
 }
 
 .modal-adopt-btn-close {
   background-color: var(--gray-dark);
+  
 }
 
 /* VALIDATION STYLES */
@@ -287,6 +293,11 @@ input[type="number"]::-webkit-outer-spin-button {
   font-weight: bold;
   font-size: 1.25rem;
   cursor: pointer;
+}
+
+.btn-donateModal-close > span {
+  display: inline-flex;
+  align-items: center;
 }
 
 .btn-donateModal-close {
