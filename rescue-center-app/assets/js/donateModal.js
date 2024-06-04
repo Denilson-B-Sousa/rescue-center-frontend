@@ -65,8 +65,8 @@ function donateModalValidation() {
 
 
         setTimeout(function() {
-            window.location.replace("../../src/SucessPage/index.html");
-        }, 2000)
+            window.location.replace("../../../rescue-center-app/src/sucessPage/index.html");
+        }, 1000)
 
     } else if (email === '' || money === 0 || isPaymentOptionChecked === false) {
         moneyDonateError.innerHTML = "*Required";

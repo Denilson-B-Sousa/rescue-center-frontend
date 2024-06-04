@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucess Page</title>
+    <link rel="stylesheet" href="../../assets/styles/sucess-page.css">
+</head>
+<body>
+    <header class="header">
+
+        <nav class="navbar">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="../../assets/images/logo.png" alt="">
+                </a>
+            </div>
+            <ul class="navbar-list">
+                <li><a href="#" class="navbar-link">Rescue сenter</a></li>
+                <li><a href="#" class="navbar-link">Apply to adopt</a></li>
+                <li><a href="#" class="navbar-link">Volunteer</a></li>
+                <li><a href="#" class="navbar-link">Ways to give</a></li>
+                <li><a href="#" class="navbar-link">Events</a></li>
+            </ul>
+        </nav>
+
+        <div class="contact-container">
+            <span class="contact">
+                <img src="../../assets/images/header/phone.svg" alt="">
+                631-249-7325
+            </span>
+            <button class="call-to-action" id="btn-donate">
+                <span class="image-container">
+                    <img src="../../assets/images/header/heart.svg" alt="">
+                </span>
+                Donate
+            </button>
+        </div>
+        <div class="header-line"></div>
+    </header>
+
+     <!-- DONATE MODAL -->
+
+     <dialog class="donate-modal modal" id="donate-modal">
+        <h2 class="modal-title modal-donate-title">Choose your Donate</h2>
+
+        <form action="" class="form">
+            <label for="">Email <span>*</span></label>
+            <input type="email" class="email-input-modal" id="email-donate" placeholder="youremail@here">
+
+            <span class="error" id="email-donate-error"></span>
+
+            <label for="">How much can you help?</label>
+            <input type="number" id="money-donate" class="money-input-modal" name="money" pattern="\d+(\,\d{2})?" placeholder="R$95,00" class="donate-input-modal money-input" required >
+
+            <span class="error" id="money-donate-error"></span>
+
+            <label for="">Payment Method <span>*</span></label>
+
+            <div class="payment-method-container">
+                <div class="payment-method-radio-container">
+
+                    <input type="radio" class="radio-modal" name="paymentOption" id="pix" value="PIX" required>
+                    <label for="pix" class="payment-method" id="label-pix">Pix</label>
+
+                    <input type="radio" class="radio-modal-two" name="paymentOption" id="credit" value="Credit Card" required>
+                    <label for="credit" class="payment-method-two" id="label-credit">Credit Card</label>
+
+                    <input type="radio" class="radio-modal-three" name="paymentOption" id="paypal" value="Paypal" required>
+                    <label for="paypal" class="payment-method-three" id="label-paypal">Paypal</label>
+                </div> 
+            </div>
+
+            <span class="error" id="option-payment-error"></span>
+
+            <div class="btn-modal-container">
+                <button class="btn-donateModal" id="btn-send-donate">
+                    <span class="image-container">
+                        <img src="../../assets/images/header/heart.svg" alt="">
+                    </span>
+                    I wanna  Help!
+                </button>
+                <button id="btn-donateModal-close" class="modal-btn btn-donateModal-close">
+                    <span>
+                        <img src="../../assets/images/adopt-modal/CaretLeft.svg" alt="">
+                    </span>
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </dialog>
+
+    <main class="main">
+        <div>
+            <a href="../index.html" class="btn-back">
+                <span>
+                    <img src="../../assets/images/sucess-page/caret-left.svg" alt="">
+                </span>
+                Back
+            </a>
+            <h1 class="heading-primary">Sucess!</h1>
+            <p class="description">Thank you very much!</p>
+        </div>
+        <div class="animation-container">
+            <img src="../../assets/images/sucess-page/animation-dog.png" alt="">
+        </div>
+    </main>
+    
+    <script src="../../assets/js/donateModal.js" defer></script>
+</body>
+</html>

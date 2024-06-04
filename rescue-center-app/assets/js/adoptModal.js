@@ -103,8 +103,8 @@ function adoptModalValidation() {
         emailInput.classList.remove('validation-error');
 
         setTimeout(function() {
-            window.location.replace("../../src/SucessPage/index.html");
-        }, 2000)
+            window.location.replace("../../../rescue-center-app/src/sucessPage/index.html");
+        }, 1000)
 
     } else if(email === '' || fullName === '' || checkboxInput.checked === false || checkSelect === false ) {
         errorEmail.innerHTML = "*required!";
